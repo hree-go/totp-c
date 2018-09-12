@@ -1,2 +1,2 @@
-make
-./generator
+* make
+* ./generator
