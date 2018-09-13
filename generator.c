@@ -25,6 +25,7 @@ bool generate_totp() {
 unsigned char * target_data(time_t current_time) {
   char shex[9];
   unsigned char *str = (unsigned char *) malloc(sizeof(char) * 8);
+  sprintf(shex, "%lx", current_time);
   if (shex[7] == 0) {
     memcpy(str, "00000000", sizeof(char) * 8);
     memcpy(str + 1, shex, sizeof(char) * 7);
